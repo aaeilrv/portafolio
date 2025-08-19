@@ -27,10 +27,11 @@ body {
 #window {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 60vw;
   justify-content: center;
   align-items: center;
 }
+
 #contact.secondary_window {
   display: flex;
   flex-direction: column;
@@ -95,6 +96,7 @@ body {
   text-align: center;
   border-radius: 0 0 20px 20px;
   padding-inline: 20px;
+  padding-block: 40px;
 }
 #info.primary {
   background-color: #f4c2c2;
@@ -127,7 +129,7 @@ body {
   background-color: #4995ED;
 }
 
-#introduction {
+#introduction { 
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -135,18 +137,18 @@ body {
 }
 #introduction .title {
   margin:0;
-  font-size: 5vh;
+  font-size: 6vw;
   font-weight: 400;
 }
 #introduction .title .name {
   font-weight: 600;
 }
 #introduction .subtitle {
-  height: 4vh;
+  height: 4vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2vh;
+  font-size: 2.5vw;
 }
 #introduction .subtitle h3 {
   font-weight: 200;
@@ -154,9 +156,12 @@ body {
 
 #nav_buttons {
   display: flex;
+  gap: 20px;
+  flex-direction: column;
   justify-self: center;
   justify-content: space-between;
-  width: 75%;
+  width: 80vw;
+  align-items: center;
 }
 
 button {
@@ -167,7 +172,7 @@ button {
 
 .primary_button {
   width: 25%;
-  height: 60%;
+  height: 3.5vh;
   background-color: #fff;
   border: #9E8282;
   border-style: solid;
@@ -210,4 +215,46 @@ p {
 #contact {
   text-align: left;
   padding-inline: 10px;
+}
+
+@media only screen and (min-width: 992px) {
+  #info {
+    padding-block: 0px;
+  }
+
+  #window {
+    width: 580px;
+  }
+
+  #nav_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    justify-content: space-between;
+    width: 75%;
+  }
+
+  .primary_button {
+    width: 25%;
+    height: 60%;
+    background-color: #fff;
+    border: #9E8282;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 8px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 4px;
+    transition: 0.3s;
+  }
+
+  #introduction .title {
+    font-size: 5vh;
+  }
+  #introduction .subtitle {
+    height: 4vh;
+    font-size: 2vh;
+  }
 }
