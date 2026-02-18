@@ -9,58 +9,128 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="about" class="secondary_window" style="left: calc(50vw - 800px); top: calc(50vh - 280px); display: none">
-    <div id="navbar" class="secondary_navbar">
-      ABOUT
-      <button class="circle" id="about_close">X</button>
-    </div>
-    <div id="division" class="secondary"></div>
-    <div id="info" class="secondary">
-      <div id="about">
-        <p><b>Greetings!</b>
-      </div>
-    </div>
+
+  <div class="navbar">
+    <button class="navbar__button" id="lang_toggler" data-lang-key="navbar.lang"></button>
+    <div class="navbar__divider"></div>
+    <button class="navbar__button" id="theme_toggler"><img src="sun.svg" alt="Sun Icon"></button>
   </div>
-  <div id="contact" class="secondary_window" style="left: calc(50vw + 100px); top: calc(50vh - 350px); display: none">
-    <div id="navbar" class="secondary_navbar">
-      CONTACT <button class="circle" id="contact_close">X</button>
-    </div>
-    <div id="division" class="secondary"></div>
-    <div id="info" class="secondary">
-        <p>For work related inquiries you can contact me through the following email: bla@bla.com</p>
-    </div>
+  
+  <div class="cv">
+    <section class="hero">
+      <header class="hero__header">
+        <div class="hero__image"></div>
+        <div class="hero__title">
+          <h1 class="hero__name">Valeria Vera Herrera</h1>
+          <div class="hero__description">
+            <h3 data-lang-key="hero.desc"></h3>
+            <h5>Caracas, Venezuela</h5>
+          </div>
+        </div>
+      </header>
+
+      <p id="hero-bio" class="hero__bio" data-lang-key="hero.intro"></p>
+    </section>
+    
+    <hr/>
+
+    <section id="skills" class="section">
+      <h2 class="section_title" id="skills__title" lang="en" data-lang-key="skills.title"></h2>
+      <ul class="skills_list">
+        <li class="skills_object">
+          <span class="skills_title" data-lang-key="skills.lang_title"></span>
+          <span data-lang-key="skills.lang_body"></span>
+        </li>
+        <li class="skills_object"><span class="skills_title" data-lang-key="skills.prog"></span>Python, Typescript, C#</li>
+        <li class="skills_object"><span class="skills_title" data-lang-key="skills.db"></span>PostgreSQL, SQLServer</li>
+        <li class="skills_object"><span class="skills_title" data-lang-key="skills.frameworks"></span>NextJS, Django, Rails*</li>
+        <li class="skills_object"><span class="skills_title" data-lang-key="skills.nocode"></span>Glide Apps, N8N, Zapier, Make, Xano</li>
+        <li class="skills_object"><span class="skills_title" data-lang-key="skills.tech"></span>Git, Docker, Docker Compose</li>
+      </ul>
+      <h5 data-lang-key="skills.learning"></h5>
+    </section>
+
+    <hr/>
+
+    <section id="experience" class="section">
+      <h2 class="section_title" data-lang-key="experience.title"></h2>
+
+      <div class="experience_entries">
+        <div class="experience_entry">
+          <div class="title">
+            <h4 data-lang-key="experience.entries.tealca.date"></h4>
+            <h3 data-lang-key="experience.entries.tealca.title"></h3>
+            <h5 data-lang-key="experience.entries.tealca.company"></h5>
+          </div>
+          <p data-lang-key="experience.entries.tealca.desc"></p>
+        </div>
+
+        <div class="experience_entry">
+          <div class="title">
+            <h4 data-lang-key="experience.entries.moneybook.date"></h4>
+            <h3 data-lang-key="experience.entries.moneybook.title"></h3>
+            <h5 data-lang-key="experience.entries.moneybook.company"></h5>
+          </div>
+          <p data-lang-key="experience.entries.moneybook.desc"></p>
+        </div>
+
+        <div class="experience_entry">
+          <div class="title">
+            <h4 data-lang-key="experience.entries.snip.date"></h4>
+            <h3 data-lang-key="experience.entries.snip.title"></h3>
+            <h5 data-lang-key="experience.entries.snip.company"></h5>
+          </div>
+          <p data-lang-key="experience.entries.snip.desc"></p>
+        </div>
+
+        <div class="experience_entry">
+          <div class="title">
+            <h4 data-lang-key="experience.entries.freelance.date"></h4>
+            <h3 data-lang-key="experience.entries.freelance.title"></h3>
+            <h5 data-lang-key="experience.entries.freelance.company"></h5>
+          </div>
+          <p data-lang-key="experience.entries.freelance.desc"></p>
+        </div>
+      </div>
+    </section>
+
+    <hr/>
+
+    <!-- <section class="projects">
+    </section>
+    <hr/> -->
+
+    <section id="education" class="section">
+      <h2 class="section_title" data-lang-key="education.title"></h2>
+      <div class="experience_entry">
+        <div class="title">
+          <h4 data-lang-key="education.entries.bsc.date"></h4>
+          <h3 data-lang-key="education.entries.bsc.title"></h3>
+          <h5 data-lang-key="education.entries.bsc.institution"></h5>
+        </div>
+      </div>
+    </section>
+
+    <hr/>
+
+    <section id="contact" class="section">
+      <h2 class="section_title" data-lang-key="contact.title"></h2>
+      <div class="contact_links">
+        <div class="contact_body" data-lang-key="contact.link.linkedin"><i class="fa-brands fa-linkedin-in"></i><p class="contact_link"><a href="https://www.linkedin.com/in/valeria-v-herrera-806904181/">Linkedin</a></p></div>
+        <div class="contact_body" data-lang-key="contact.link.github"><i class="fa-brands fa-github"></i><p class="contact_link"><a href="https://github.com/aaeilrv">Github</a></p></div>
+        <div class="contact_body" data-lang-key="contact.link.email"><i class="fa-regular fa-envelope"></i><p class="contact_link"><a href="mailto:veraherreravaleria@gmail.com">Email</a></p></div>
+      </div>
+    </section>
   </div>
-  <div id="main_container">
-    <div id="window">
-      <div id="navbar" class="primary">
-        <!--<button class="circle"></button>
-        <button class="circle"></button>
-        <button class="circle"></button>-->
-      </div>
-      <div id="division" class="primary"></div>
-      <div id="info" class="primary">
-        <div id="introduction">
-          <h1 class="title">Hi! I'm <span class="name">Val</span></h1>
-          <div class="subtitle"><h3>Wannabee Developer</h3></div>
-        </div>
-        <div id="nav_buttons">
-          <button class="primary_button" id="about_button_open">
-            <p>about</p>
-          </button>
-          <button disabled class="primary_button">
-            <p>portfolio</p>
-          </button>
-          <button class="primary_button" id="contact_button_open">
-            <p>contact</p>
-          </button>
-        </div>
-      </div>
-    </div>
+
+  <div class="footer">
+    <h6>Copyright © 2026 Valeria V. Herrera</h6>
   </div>
   <!-- Script -->
-  <script src="script.js"></script>
+  <script src="colorTheme.js"></script>
+  <script src="language.js"></script>
 </body>
 </html>
